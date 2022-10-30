@@ -1,0 +1,89 @@
+- continue template.fxml, beautify gui design
+- adding tags? (nah)
+- adding of shadows
+
+-have tab to have overview of week
+-combination of both tasks and reminders?
+
+- fx everything ahhhhhh
+- some font and fxml and css problem
+- if possible, do entire project in pure code
+- use implements comparator
+- can try implement
+
+Guidelines
+- lucida sans for all fonts
+- follow colour scheme
+- home, particulars and reminders page css and fxml settled for now
+
+- can try also Overview page (for week) combining tasks and reminders
+- can also do progress page (no. of tasks completed in one list)
+- standardise css effects
+
+Stuff done
+- overall gui design
+- home page is done, fully functional yay
+- resource page text is done, image still have error to fix
+- particulars, resources page done
+- reminders page done, except search directory (maybe can have view also)
+- task page and view task list page done, except directory (yay and also do the click label then got style
+and remove style from other labels )
+- yayy main functions done
+- custom nodes for stats and overview done yay
+- done adding isCompleted variable, should not be editable list
+to do: add way to include displaying of completed task (done)
+- can display completed tasks (done)
+- continue Statistics class (yay i think its done)
+- continue add 2 Hbox up and down for overview, rename overviewVBox in statistics, find out what went wrong with
+arraylist then yay nice (done yay)
+- use regex for checking sign up and adding/editing stuff (done)
+- splash screen (refer to notes) (done)
+- completed task checkbox (not sure whether should do, prob not) (done)
+- statistics tab (done)
+- overview tab (done)
+- first initialization of remindersToday has error (done)
+- save task does not work (should be done)
+- what if click save task when adding (should be accounted for by point below)
+- save button when nothing selected (for all check) (should be done)
+- help info and sign up change font (done)
+- sign up button positioning (done)
+- can create duplicate reminder (change) (done)
+- new reminders not added to text file, arraylist (done)
+- everytime click home add remindersToday? (done)
+- cannot click other stuff after saving, saving also got problem (done)
+- empty reminder title works (disable that) (done)
+- add task when no field given (done)
+- add pop up upon saving (for all tabs) (done)
+- disable allow empty notes (done) and tasks to be created (done)
+- trim inputsc1 (done)
+- add animation (done)
+- add internationalization (done)
+- add alert for invalid file name, CON, AUX, PRN, LST, COM0-9, LTP0-9, NUL (done)
+- done search directory for reminders yay just replicate for notes and tasks (done)
+- vbox for tast list does not update upon change (done)
+- done checking input for new reminder
+- done trimming new task list creation
+- done checking for tasks
+- done checking for notes
+
+Stuff to do:
+- major thing to fix: pop up to allow user to enter preference for custom (check throughout reminder and task) (done)
+- search directory (done)
+- possible add variable of taskList title to each task list (need to do) (did another way)
+- full screen, allow escape
+- set hover to another color, alignment and design stuff
+- solve comma thing (make sure files not disrupted) (done)
+- decodeString() does not work
+- do not allow tasks to be the same (same title, different ta)
+
+In progress:
+- to complete stuff to do and errors to fix
+
+Errors to fix:
+- saving \n problems (textfields?) check cervon (done)
+- some tasks repeated (not repeated, just same title in different task list) (done)
+- limit word count for tasklist
+
+
+Standardise!!!!
+- class saves the processed string, only when writing to project, decode, process upon saving

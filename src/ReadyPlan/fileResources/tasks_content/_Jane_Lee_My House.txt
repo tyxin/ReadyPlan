@@ -1,0 +1,2 @@
+Paint Living Room,White paint,07/10/2020,NO REPEAT,false
+Water Cactus,If I forget where cactus is; look at bar table,08/10/2020,DAILY,false

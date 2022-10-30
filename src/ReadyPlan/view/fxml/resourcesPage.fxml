@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1275.0" stylesheets="@../css/designResources.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ReadyPlan.controller.ControllerResources">
+   <children>
+      <GridPane layoutX="286.0" layoutY="164.0" prefHeight="814.0" prefWidth="1561.3333333333333" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="628.0" minWidth="10.0" prefWidth="230.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1038.666692097982" minWidth="10.0" prefWidth="1038.666692097982" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="256.33331298828125" minHeight="10.0" prefHeight="71.88890075683594" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="256.33331298828125" minHeight="10.0" prefHeight="55.00001271565756" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="256.33331298828125" minHeight="10.0" prefHeight="47.99998728434244" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="636.6666056315104" minHeight="10.0" prefHeight="429.999994913737" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="137.33331298828125" minHeight="10.0" prefHeight="51.33339436848962" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Resources" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Lucida Sans Demibold Roman" size="38.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" top="20.0" />
+               </GridPane.margin>
+            </Label>
+            <Separator prefHeight="5.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets top="20.0" />
+               </GridPane.margin>
+            </Separator>
+            <Button fx:id="resourcesSaveBtn" maxHeight="35.0" mnemonicParsing="false" onAction="#clickResourceSaveBtn" prefHeight="35.0" prefWidth="93.0" styleClass="resourcesBtn" text="Save" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Lucida Sans Demibold Roman" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="320.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="resourcesChooseFileBtn" mnemonicParsing="false" onAction="#clickChooseFile" prefHeight="35.0" prefWidth="128.0" styleClass="resourcesBtn" text="Choose File" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Lucida Sans Demibold Roman" size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="180.0" />
+               </GridPane.margin>
+            </Button>
+            <Label fx:id="resourceFileNameLbl" text="File Name: " GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Lucida Sans Demibold Roman" size="26.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="380.0" left="20.0" />
+               </GridPane.margin>
+            </Label>
+            <TextArea fx:id="resourceFileTA" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="50.0" />
+               </GridPane.margin>
+               <font>
+                  <Font name="Lucida Sans Demibold Roman" size="12.0" />
+               </font>
+            </TextArea>
+            <ComboBox fx:id="fileTypeComboBox" prefHeight="35.0" prefWidth="145.0" promptText="File Type" styleClass="comboBox" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="20.0" />
+               </GridPane.margin>
+            </ComboBox>
+            <ImageView fx:id="imageArea" fitHeight="347.0" fitWidth="994.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="20.0" top="25.0" />
+               </GridPane.margin>
+            </ImageView>
+            <VBox maxHeight="659.0" prefHeight="621.0" prefWidth="229.0" styleClass="hpBackground" GridPane.rowSpan="5">
+               <children>
+                  <Label styleClass="font" text="Ready!Plan">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="28.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="75.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../240112.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Separator prefHeight="5.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <Button fx:id="hpHomeBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#clickHome" prefHeight="55.0" prefWidth="315.0" text="     Home">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hpVBOXBtn" />
+                        <String fx:value="font" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="hpRemindersBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#clickReminders" prefHeight="60.0" prefWidth="314.0" text="     Reminders">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/bell-solid.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hpVBOXBtn" />
+                        <String fx:value="font" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="hpTasksBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#clickTasks" prefHeight="60.0" prefWidth="314.0" text="     Tasks">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/tasks-solid.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hpVBOXBtn" />
+                        <String fx:value="font" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="hpNotesBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#clickNotes" prefHeight="60.0" prefWidth="314.0" text="     Notes">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/clipboard-solid.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hpVBOXBtn" />
+                        <String fx:value="font" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="hpResourcesBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#clickResources" prefHeight="60.0" prefWidth="314.0" text="     Resources">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/tools-solid.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hpVBOXBtn" />
+                        <String fx:value="font" />
+                        <String fx:value="enlargeColorBtn" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="hpStatisticsBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#clickStatistics" prefHeight="60.0" prefWidth="314.0" text="     Statistics">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/chart-line.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hpVBOXBtn" />
+                        <String fx:value="font" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="hpOverviewBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#clickOverview" prefHeight="60.0" prefWidth="314.0" text="     Overview">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/table.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hpVBOXBtn" />
+                        <String fx:value="font" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="hpParticularBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#clickParticulars" prefHeight="60.0" prefWidth="314.0" text="     Particulars">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/user-solid.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hpVBOXBtn" />
+                        <String fx:value="font" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="hpLogoutBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#clickHpLogout" prefHeight="60.0" prefWidth="314.0" text="     Logout">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/sign-out-alt-solid.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hpVBOXBtn" />
+                        <String fx:value="font" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

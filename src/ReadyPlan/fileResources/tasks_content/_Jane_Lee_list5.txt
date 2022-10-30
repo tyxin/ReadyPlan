@@ -1,0 +1,5 @@
+Test1list5,test,06/10/2020,DAILY,false
+Test2list5,test,06/10/2020,3 DAYS,false
+Test3list5,test,22/10/2020,3 WEEKS,false
+Test4list5,test\ntest\ntest,06/10/2020,DAILY,false
+Test5list5,yay it works\nnice,06/10/2020,DAILY,false

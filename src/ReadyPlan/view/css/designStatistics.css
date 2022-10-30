@@ -1,0 +1,41 @@
+.hpBackground{
+    -fx-background-color: #fffffc;
+}
+
+.hpVBOXBtn{
+    -fx-background-color: #fffffc;
+}
+
+.separator{
+    -fx-background-color: #c2d9ff;
+}
+
+.hpVBOXBtn:pressed{
+    -fx-background-color: #aaff99;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.hpVBOXBtn:hover{
+    -fx-background-color: #aaff99;
+}
+
+.enlargeColorBtn{
+    -fx-background-color: #aaff99;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-translate-z: 5px;
+}
+
+.statisticsBtn{
+    -fx-background-color: #f5f5f5;
+    -fx-border-color: #c2d9ff;
+    -fx-border-radius: 15px;
+    -fx-border-width: 3px;
+    -fx-text-fill: #212121;
+}
+
+.statisticsBtn: hover{
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}

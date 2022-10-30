@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ReadyPlan.controller.ControllerHelpInfo">
+   <children>
+      <GridPane layoutX="83.0" layoutY="228.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="195.33334350585938" minHeight="10.0" prefHeight="113.33332824707031" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="344.00000127156574" minHeight="10.0" prefHeight="286.6666717529297" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="referDocumentationLbl" alignment="CENTER" prefWidth="600.0" text="Refer to the project documentation" textAlignment="CENTER">
+               <font>
+                  <Font name="Lucida Sans Demibold Roman" size="32.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="35.0" left="5.0" top="10.0" />
+               </GridPane.margin>
+            </Label>
+            <Label fx:id="aboutProgrammerLbl" alignment="CENTER" prefHeight="54.0" prefWidth="424.0" text="About the Programmer" textAlignment="CENTER">
+               <font>
+                  <Font name="Lucida Sans Demibold Roman" size="32.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="100.0" top="80.0" />
+               </GridPane.margin>
+            </Label>
+            <ImageView fitHeight="245.0" fitWidth="222.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="360.0" />
+               </GridPane.margin>
+               <image>
+                  <Image url="@../pic.jpg" />
+               </image>
+            </ImageView>
+            <Label fx:id="doneByLbl" alignment="CENTER" prefHeight="77.0" prefWidth="345.0" text="Done by Teoh Yu Xin" textAlignment="CENTER" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Lucida Sans Demibold Roman" size="32.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets bottom="150.0" left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <RadioButton fx:id="englishRadioButton" mnemonicParsing="false" onAction="#changeLanguage" text="English" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Lucida Sans Demibold Roman" size="24.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="50.0" top="125.0" />
+               </GridPane.margin>
+               <toggleGroup>
+                  <ToggleGroup fx:id="selectLanguage" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="chineseRadioButton" mnemonicParsing="false" onAction="#changeLanguage" text="中文（简体）" toggleGroup="$selectLanguage" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Lucida Sans Demibold Roman" size="24.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="50.0" top="200.0" />
+               </GridPane.margin>
+            </RadioButton>
+            <Label fx:id="chooseLanguageLbl" text="Choose Language:" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Lucida Sans Demibold Roman" size="24.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="50.0" top="10.0" />
+               </GridPane.margin>
+            </Label>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

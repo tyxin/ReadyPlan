@@ -1,0 +1,279 @@
+@startuml
+
+skinparam classAttributeIconSize 0
+top to bottom direction
+scale 800 width
+scale 800 height
+allow_mixing
+
+package ReadyPlan{
+   package controller{}
+   package fileResources{}
+   package icons{}
+   package model{}
+   package view{
+   package css{}
+   package fxml{}
+   }
+}
+
+note top of css
+holds all the css files for the fxml files
+end note
+
+note top of fxml
+holds all the relevant fxml files for the project
+end note
+
+package controller{
+    class Controller
+    class ControllerHelpInfo
+    class ControllerHome
+    class ControllerLogin
+    class ControllerNewReminder
+    class ControllerNotes
+    class ControllerOverview
+    class ControllerParticulars
+    class ControllerReminders
+    class ControllerResources
+    class ControllerSignUp
+    class ControllerStatistics
+    class ControllerTaskList
+    class ControllerTasks
+    class ConntrollerViewNote
+}
+
+note top of fileResources
+contains all the relevant resources for processing
+end note
+
+package model{
+    package Notes{}
+    package Overview{}
+    package Reminders{}
+    package Resources{}
+    package Security{}
+    package Statistics{}
+    package Tasks{}
+    class User
+}
+
+package Notes{
+    class Notes
+    class NotesSetUp
+}
+
+class Notes{
+    +deleteNote(notesSetUp: NotesSetUp)
+    +addNote(notesSetUp: NotesSetUp)
+}
+
+class NotesSetUp{
+    +updateNoteContent(noteContent: String)
+}
+
+package Overview{
+    class Overview
+    class OverviewSetUp
+}
+
+class Overview{
+    +loadOverViewList()
+}
+
+class OverviewSetUp{
+    +setUpOverview(width: double, height: double)
+}
+
+package Reminders{
+    class Reminders
+    class ReminderSortByCreateDate implements Comparator
+    class ReminderSortByReminderDate implements Comparator
+    class ReminderSortByType implements Comparator
+    abstract class RemindersPopUp
+    class RemindersPopUpCustom extends RemindersPopUp
+    class RemindersPopUpDaily extends RemindersPopUp
+    class RemindersPopUpMonthly extends RemindersPopUp
+    class RemindersPopUpNoRepeat extends RemindersPopUp
+    class RemindersPopUpWeekly extends RemindersPopUp
+    class RemindersPopUpYearly extends RemindersPopUp
+}
+
+class Reminders{
+    +checkDuplicateReminder(inputReminder: RemindersPopUp)
+    +addReminders(toAddPopup: RemindersPopUp)
+    +displayTodayReminders(boxToAddIn: HBox, startIndexNo: int)
+    +deleteReminder(popUpReminder: RemindersPopUp)
+    +updateReminder()
+}
+
+abstract class RemindersPopUp{
+    +setUpOneReminder()
+    +setNextDateForReminder() {abstract}
+    +styleReminderPopUp(firstline: HBox,typeOfReminderLbl: Label) {abstract}
+}
+
+package Resources{
+    class Resources
+}
+
+class Resources{
+    +OpenResourceTextFile()
+    +OpenResourceImage(imageView: ImageView)
+}
+
+package Security{
+    class Security
+    class SecurityUser
+}
+
+class Security{
+    +addNewUser(user: SecurityUser)
+    +createFilesUser(user: SecurityUser)
+}
+
+class SecurityUser{
+    +updatePassword(password: String)
+    +updateEmail(email: String)
+    +updateDescription(description: String)
+}
+
+package Statistics{
+    class Statistics
+    class StatisticsTaskSetUp
+}
+
+class Statistics{
+    +loadStatisticsList()
+    +setUpTaskStat(width: int, height: int)
+}
+
+package Tasks{
+    class Tasks
+    class TasksSetUpCustom extends TasksSetUpTemplate
+    class TasksSetUpDaily extends TasksSetUpTemplate
+    class TasksSetUpMonthly extends TasksSetUpTemplate
+    class TasksSetUpNoRepeat extends TasksSetUpTemplate
+    abstract class TasksSetUpTemplate
+    class TasksSetUpWeekly extends TasksSetUpTemplate
+    class TasksSetUpYearly extends TasksSetUpTemplate
+}
+
+class Tasks{
+    +deleteTaskList(taskListTitle: String)
+    +deleteTaskInList(taskListTitle: String, task: TasksSetUpTemplate)
+    +addTaskList(taskListTitle: String)
+    +addTaskInList(taskListTitle: String, task: TasksSetUpTemplate)
+    +updateTaskInList(taskListTitle: String, task: TasksSetUpTemplate, newTaskTitle: String,  newTaskDes: String,
+                                      newDateForTask: LocalDate, newRepeat: String)
+}
+
+class TasksSetUpTemplate{
+    +updateNextDate() {abstract}
+}
+
+class User{
+    -remindersUser: Reminders {static}
+    -notesUser: Notes {static}
+    -tasksUser: Tasks {static}
+    -statisticsUser: Statistics {static}
+    -overviewUser: Overview {static}
+    -secure: Security {static}
+    +initializeUser() {static}
+    -updateRemindersDate() {static}
+    -updateTasksDateAndCompletion() {static}
+}
+
+class Controller{
+}
+
+note right of Controller
+contains methods that switches between
+tabs
+all Controller classes implement Initializable
+end note
+
+class ControllerHelpInfo{
+    +changeLanguage(event: ActionEvent)
+}
+
+note left of ControllerHelpInfo
+does internationalisation
+end note
+
+class ControllerHome extends Controller{
+}
+
+note bottom of ControllerHome
+displays today's reminders
+end note
+
+note bottom of icons
+contains all the icon pngs used in the project
+end note
+
+class ControllerLogin{
+    +clickSignUp()
+    +clickLogin()
+    +clickHelpInfo()
+    +initializeData()
+}
+
+class ControllerNewReminder extends Controller{
+    +clickSaveReminderBtn(event: ActionEvent)
+}
+
+class ControllerNotes extends Controller{
+    +displayNotes()
+    +notesSearch(inputMethodEvent: InputMethodEvent)
+    +addNewNote()
+}
+
+class ControllerOverview extends Controller{
+}
+
+class ControllerParticulars extends Controller{
+}
+
+note bottom of ControllerParticulars
+allows editing of email, description and password of user
+end note
+
+class ControllerReminders extends Controller{
+    +clickSort()
+    +deleteReminderAtIndex(indexNo: int)
+    +displayReminders()
+}
+
+class ControllerResources extends Controller{
+    +clickResourceSaveBtn(event: ActionEvent)
+    +clickChooseFile(event: ActionEvent)
+}
+
+class ControllerSignUp extends Controller{
+    +clickSignUp()
+}
+
+class ControllerStatistics extends Controller{
+    +displayStatistics()
+}
+
+class ControllerTaskList extends Controller{
+    +displayTasksInTaskList()
+    +saveTask(event: ActionEvent)
+    +addTask(event: ActionEvent)
+    +clickViewCompleteTasks(event: ActionEvent)
+}
+
+class ControllerTasks extends Controller{
+    +displayTasks()
+    +clickSort(event: ActionEvent)
+    +viewTaskAtIndex(indexNo: int)
+    +deleteTaskAtIndex(indexNo: int)
+    +tasksSearch(inputMethodEvent: InputMethodEvent)
+}
+
+class ConntrollerViewNote extends Controller{
+}
+
+@enduml

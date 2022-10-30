@@ -1,0 +1,3 @@
+task1list4,,30/09/2020,NO REPEAT,true
+task2list4,,01/10/2020,NO REPEAT,true
+task3list4,,06/10/2020,DAILY,false

@@ -1,0 +1,28 @@
+.hpBackground{
+    -fx-background-color: #fffffc;
+}
+
+.hpVBOXBtn{
+    -fx-background-color: #fffffc;
+}
+
+.separator{
+    -fx-background-color: #c2d9ff;
+}
+
+.hpVBOXBtn:pressed{
+    -fx-background-color: #aaff99;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.hpVBOXBtn:hover{
+    -fx-background-color: #aaff99;
+}
+
+.enlargeColorBtn{
+    -fx-background-color: #aaff99;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-translate-z: 5px;
+}

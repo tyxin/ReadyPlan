@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1275.0" stylesheets="@../css/designViewTaskList.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ReadyPlan.controller.ControllerTaskList">
+   <children>
+      <GridPane layoutX="145.0" layoutY="183.0" prefHeight="833.0" prefWidth="1420.3333333333333" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="623.333251953125" minWidth="10.0" prefWidth="230.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="623.333251953125" minWidth="10.0" prefWidth="145.66664632161462" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="1157.0000381469727" minWidth="10.0" prefWidth="903.0000203450521" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="311.6666259765625" minHeight="10.0" prefHeight="103.66666412353516" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="546.3333358764648" minHeight="10.0" prefHeight="546.3333358764648" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="viewTaskBackBtn" mnemonicParsing="false" onAction="#clickTaskBack" styleClass="viewTaskListButton" text="&lt; Back" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Lucida Sans Demibold Roman" size="22.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="25.0" top="45.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="saveTaskBtn" mnemonicParsing="false" onAction="#saveTask" styleClass="viewTaskListButton" text="Save" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Lucida Sans Demibold Roman" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="700.0" top="485.0" />
+               </GridPane.margin>
+            </Button>
+            <ScrollPane fx:id="taskListScrollPane" prefHeight="482.0" prefWidth="337.0" styleClass="scrollPane" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets bottom="55.0" left="20.0" right="545.0" />
+               </GridPane.margin>
+               <content>
+                  <VBox fx:id="taskVBox" prefHeight="485.0" prefWidth="335.0" />
+               </content>
+            </ScrollPane>
+            <Label fx:id="taskListTitle" alignment="CENTER" prefHeight="54.0" prefWidth="337.0" styleClass="title" text="taskListTitle" textAlignment="CENTER" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Lucida Sans Demibold Roman" size="26.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" top="50.0" />
+               </GridPane.margin>
+            </Label>
+            <GridPane styleClass="detailContent" GridPane.columnIndex="2" GridPane.rowSpan="2">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="237.6666259765625" minWidth="10.0" prefWidth="173.666748046875" />
+                  <ColumnConstraints maxWidth="325.33333333333337" minWidth="268.6666463216146" prefWidth="278.333251953125" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="151.33331298828125" minHeight="0.0" prefHeight="44.333335876464844" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="222.9999771118164" minHeight="10.0" prefHeight="57.333333333333336" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="431.33336130778" minHeight="10.0" prefHeight="293.3333435058594" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="399.33335876464844" minHeight="10.0" prefHeight="61.99998982747394" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="399.33335876464844" minHeight="10.0" prefHeight="55.66668701171881" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="399.33335876464844" minHeight="10.0" prefHeight="55.66668701171881" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <GridPane.margin>
+                  <Insets bottom="60.0" left="400.0" right="30.0" top="50.0" />
+               </GridPane.margin>
+               <children>
+                  <Label text="Task Date:" GridPane.rowIndex="3">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="24.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="CENTER" prefHeight="63.0" prefWidth="510.0" styleClass="title" GridPane.columnSpan="2">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label text="Description:" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="24.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <DatePicker fx:id="taskDatePicker" editable="false" prefHeight="34.0" prefWidth="288.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <GridPane.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </GridPane.margin></DatePicker>
+                  <TextArea fx:id="taskDescriptionTA" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </GridPane.margin>
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="15.0" />
+                     </font>
+                  </TextArea>
+                  <Label text="Task Title:" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="24.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="taskTitleTF" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="15.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" right="20.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label text="Type:" GridPane.rowIndex="4">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="24.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <ComboBox fx:id="typeOfTaskComboBox" prefHeight="39.0" prefWidth="241.0" promptText="Type Of Task:" styleClass="comboBox" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+                  <Label text="Custom:" GridPane.rowIndex="5">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="24.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <Spinner fx:id="customTaskSpinner" prefHeight="31.0" prefWidth="92.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="20.0" />
+                     </GridPane.margin>
+                  </Spinner>
+                  <ComboBox fx:id="customTaskComboBox" prefHeight="39.0" prefWidth="143.0" styleClass="comboBox" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                     <GridPane.margin>
+                        <Insets left="120.0" />
+                     </GridPane.margin>
+                  </ComboBox>
+               </children>
+            </GridPane>
+            <Button fx:id="deleteTaskBtn" mnemonicParsing="false" onAction="#clickDeleteTask" styleClass="viewTaskListButton" text="Delete Task" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Lucida Sans Demibold Roman" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="520.0" top="485.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="addTaskBtn" mnemonicParsing="false" onAction="#addTask" styleClass="viewTaskListButton" text="Add" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Lucida Sans Demibold Roman" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="800.0" top="485.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="viewCompleteTaskBtn" mnemonicParsing="false" onAction="#clickViewCompleteTasks" prefHeight="39.0" prefWidth="340.0" styleClass="viewTaskListButton" text="View Completed Tasks" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Lucida Sans Demibold Roman" size="20.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="20.0" top="485.0" />
+               </GridPane.margin>
+            </Button>
+            <VBox maxHeight="659.0" prefHeight="621.0" prefWidth="229.0" styleClass="hpBackground" GridPane.rowSpan="2">
+               <children>
+                  <Label styleClass="font" text="Ready!Plan">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="28.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="15.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="75.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../240112.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Label>
+                  <Separator prefHeight="5.0" prefWidth="200.0">
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Separator>
+                  <Button fx:id="hpHomeBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#clickHome" prefHeight="55.0" prefWidth="315.0" text="     Home">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                     <graphic>
+                        <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/home.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hpVBOXBtn" />
+                        <String fx:value="font" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="hpRemindersBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#clickReminders" prefHeight="60.0" prefWidth="314.0" text="     Reminders">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/bell-solid.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hpVBOXBtn" />
+                        <String fx:value="font" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="hpTasksBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#clickTasks" prefHeight="60.0" prefWidth="314.0" text="     Tasks">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/tasks-solid.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hpVBOXBtn" />
+                        <String fx:value="font" />
+                        <String fx:value="enlargeColorBtn" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="hpNotesBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#clickNotes" prefHeight="60.0" prefWidth="314.0" text="     Notes">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/clipboard-solid.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hpVBOXBtn" />
+                        <String fx:value="font" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="hpResourcesBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#clickResources" prefHeight="60.0" prefWidth="314.0" text="     Resources">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/tools-solid.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hpVBOXBtn" />
+                        <String fx:value="font" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="hpStatisticsBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#clickStatistics" prefHeight="60.0" prefWidth="314.0" text="     Statistics">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/chart-line.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hpVBOXBtn" />
+                        <String fx:value="font" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="hpOverviewBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#clickOverview" prefHeight="60.0" prefWidth="314.0" text="     Overview">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/table.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hpVBOXBtn" />
+                        <String fx:value="font" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="hpParticularBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#clickParticulars" prefHeight="60.0" prefWidth="314.0" text="     Particulars">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/user-solid.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hpVBOXBtn" />
+                        <String fx:value="font" />
+                     </styleClass>
+                  </Button>
+                  <Button fx:id="hpLogoutBtn" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#clickHpLogout" prefHeight="60.0" prefWidth="314.0" text="     Logout">
+                     <font>
+                        <Font name="Lucida Sans Demibold Roman" size="20.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../icons/sign-out-alt-solid.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <styleClass>
+                        <String fx:value="hpVBOXBtn" />
+                        <String fx:value="font" />
+                     </styleClass>
+                  </Button>
+               </children>
+            </VBox>
+            <Button fx:id="howTaskCompletedInfoBtn" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#displayHowTaskCompleted" prefHeight="58.0" prefWidth="135.0" styleClass="viewTaskListButton" text="How Task &#10;Completed" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Lucida Sans Demibold Roman" size="18.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="5.0" top="465.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

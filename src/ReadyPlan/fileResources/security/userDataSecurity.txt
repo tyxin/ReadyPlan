@@ -1,0 +1,4 @@
+Jane Lee,123456,h1234@nushigh.edu.sg,Year 4 Student NUS High
+Michael Lim,H23ksd3,h348@nushigh.edu.sg,student Year 6
+Benny Yeo,97531,h1897@nushigh.edu.sg,Year 5 Student
+Kenny Ho,1357,h17842@nushigh.edu.sg,hello

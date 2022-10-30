@@ -1,0 +1,82 @@
+.hpBackground{
+    -fx-background-color: #fffffc;
+}
+
+.hpVBOXBtn{
+    -fx-background-color: #fffffc;
+}
+
+.separator{
+    -fx-background-color: #c2d9ff;
+}
+
+.hpVBOXBtn:pressed{
+    -fx-background-color: #aaff99;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+}
+
+.hpVBOXBtn:hover{
+    -fx-background-color: #aaff99;
+}
+
+
+.notesBtn{
+    -fx-background-color: #f5f5f5;
+    -fx-border-color: #c2d9ff;
+    -fx-border-radius: 15px;
+    -fx-border-width: 3px;
+    -fx-text-fill: #212121;
+}
+
+.notesBtn: hover{
+    -fx-scale-x: 1.2;
+    -fx-scale-y: 1.2;
+}
+
+.titleTable{
+    -fx-background-color: #adf8ff;
+}
+
+.titleRoundLeft{
+    -fx-background-radius: 10px 0px 0px 0px;
+}
+
+.titleRoundRight{
+    -fx-background-radius: 0px 10px 0px 0px;
+}
+
+.gridRound{
+    -fx-background-radius: 10px;
+    -fx-background-color: #fffffc;
+
+}
+
+.enlargeColorBtn{
+    -fx-background-color: #aaff99;
+    -fx-scale-x: 1.02;
+    -fx-scale-y: 1.02;
+    -fx-translate-z: 5px;
+    /*try making it pop up and dropping shadow
+    */
+}
+
+.viewBtn{
+    -fx-background-color: #c2d9ff;
+    -fx-text-fill: #212121;
+}
+
+.viewBtn: hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
+
+.deleteBtn{
+    -fx-background-color: #ffc2c2;
+    -fx-text-fill: #212121;
+}
+
+.deleteBtn: hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+}
